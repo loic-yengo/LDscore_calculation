@@ -144,7 +144,7 @@ Several PLINK prefixes, a random LD sample, and a SNP list:
 | `--seed` | 1 | Seed for `--nsample`, from 0 through 4294967295 |
 | `--write-sample` | off | Write the LD-score individuals to `[prefix].sample` |
 | `--nthread` | 1 | POSIX threads for the SNP loop within each chromosome |
-| `--out` | `ldscore` | Prefix for `[prefix].l2.ldscore` and `[prefix].log` |
+| `--out` | `ldscore` | Prefix for `[prefix].ldscore.txt` and `[prefix].log` |
 
 `--maf` uses *p* = (sum of dosages / number of non-missing genotypes) / 2, and the minor allele frequency is min(*p*, 1−*p*). Both are computed on the eligible individuals, not on the `--nsample` draw.
 
@@ -154,7 +154,7 @@ Several PLINK prefixes, a random LD sample, and a SNP list:
 
 | File | Contents |
 |------|----------|
-| `[prefix].l2.ldscore` | Header `CHR SNP BP L2`, then one row per retained SNP |
+| `[prefix].ldscore.txt` | Header `CHR SNP BP L2`, then one row per retained SNP |
 | `[prefix].log` | Command, filters, window, sample, and per-chromosome summaries |
 | `[prefix].sample` | Written with `--write-sample`. Header `FID IID`, then the LD-score individuals in FAM order |
 
