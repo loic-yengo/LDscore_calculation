@@ -1047,7 +1047,7 @@ void print_help(){
   cerr<<"\t--interpolate  : Place each SNP by linear interpolation inside its map interval. Off by default."<<endl;
   cerr<<"\t                 Off: a SNP inside an interval takes the cM at Begin, and a SNP outside the span is dropped."<<endl;
   cerr<<"\t                 On: interior SNPs are interpolated, and SNPs outside the span are clamped to the end values."<<endl;
-  cerr<<"\t--out          : Prefix for [prefix].l2.ldscore and [prefix].log. Default is ldscore."<<endl;
+  cerr<<"\t--out          : Prefix for [prefix].ldscore.txt and [prefix].log. Default is ldscore."<<endl;
   cerr<<"\t                 LD scores have four columns: chromosome, SNP id, base pair, LD score."<<endl;
 }
 
@@ -1248,7 +1248,7 @@ int main(int argc, char *argv[]){
 
   const string famfile = prefixes.front() + ".fam";
   const string logFile = outPrefix + ".log";
-  const string ldFile  = outPrefix + ".l2.ldscore";
+  const string ldFile  = outPrefix + ".ldscore.txt";
   const string sampleFile = outPrefix + ".sample";
 
   const auto t0 = chrono::steady_clock::now();
